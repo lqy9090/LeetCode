@@ -37,11 +37,27 @@ public class Main {
         System.out.println(b);
     }
 
+    public void remoteDuplicateTest() {
+        Solution solution = new Solution();
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int k = solution.removeDuplicates(nums);
+        System.out.println(k);
+    }
+
+    public void removeElementTest() {
+        Solution solution = new Solution();
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int k = solution.removeElement(nums, 1);
+        System.out.println(k);
+    }
+
     public static void main(String[] args) {
         Main main = new Main();
 //        main.twoSumTest();
 //        main.threeNumTest();
 //        main.checkInclusionTest();
-        main.validPalindrome();
+//        main.validPalindrome();
+//        main.remoteDuplicateTest();
+        main.removeElementTest();
     }
 }

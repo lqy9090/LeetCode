@@ -151,4 +151,50 @@ public class Solution {
 
         return true;
     }
+
+    public int removeDuplicates(int[] nums) {
+        int n = nums.length;
+        if (nums.length <=1) return nums.length;
+        int pre = 0;
+        int cur = pre + 1 ;
+        int cnt = 0;
+        while (cur < nums.length) {
+            if (nums[pre] == nums[cur]) {
+//                nums[cur] = nums[cur + 1];
+                cur++;
+                cnt++;
+            }else {
+                nums[cur - cnt] = nums[cur];
+                pre = cur;
+                cur ++;
+            }
+        }
+        int k = n-cnt;
+        nums = Arrays.copyOfRange(nums, 0, k);
+        System.out.println(Arrays.toString(nums));
+        return k;
+    }
+
+    public int removeElement(int[] nums, int val) {
+        int n = nums.length;
+        if (nums.length <=1) return nums.length;
+        int pre = 0;
+        int cur = pre + 1 ;
+        int cnt = 0;
+        while (cur < nums.length) {
+            if (nums[cur] == val) {
+//                nums[cur] = nums[cur + 1];
+                cur++;
+                cnt++;
+            }else {
+                nums[cur - cnt] = nums[cur];
+                pre = cur;
+                cur ++;
+            }
+        }
+        int k = n-cnt;
+        nums = Arrays.copyOfRange(nums, 0, k);
+        System.out.println(Arrays.toString(nums));
+        return k;
+    }
 }
