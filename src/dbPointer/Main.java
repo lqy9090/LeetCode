@@ -46,9 +46,17 @@ public class Main {
 
     public void removeElementTest() {
         Solution solution = new Solution();
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
-        int k = solution.removeElement(nums, 1);
+        int[] nums = {0,1,2,2,3,0,4,2};
+        int k = solution.removeElement(nums, 2);
         System.out.println(k);
+    }
+
+    public void maxAreaTest() {
+        Solution solution = new Solution();
+        int[] height = {1, 8, 6, 2, 5, 4, 8, 3, 7};
+//        int[] height = {1, 1};
+        int maxArea = solution.maxAreaNew(height);
+        System.out.println(maxArea);
     }
 
     public static void main(String[] args) {
@@ -58,6 +66,7 @@ public class Main {
 //        main.checkInclusionTest();
 //        main.validPalindrome();
 //        main.remoteDuplicateTest();
-        main.removeElementTest();
+//        main.removeElementTest();
+        main.maxAreaTest();
     }
 }
